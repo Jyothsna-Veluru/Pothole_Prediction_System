@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Pothole Detection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+
+    <section class="home-section">
+        <div class="home-text">
+            <h1>Pothole Detection</h1>
+            <p>Detect and report potholes using AI with ease!</p>
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file" required>
+                <button type="submit">Get Started</button>
+            </form>
+        </div>
+        <div class="home-image">
+            <img src="{{ url_for('static', filename='pothhole.png') }}" alt="Pothole AI" height="400" width="500">
+        </div>
+    </section>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detection Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    
+    <div class="content">
+        <h1>Detection Result</h1>
+        <div class="result-box">
+            <img src="{{ url_for('static', filename='uploads/' + filename) }}" class="uploaded-img" alt="Uploaded Image">
+            <p><strong>Result:</strong> {{ result }}</p>
+        </div>
+        <a href="/" class="back-btn">← Go Back</a>
+    </div>
+</body>
+</html>
